@@ -1,13 +1,13 @@
 server:
   port: ${PORT:8080}
   servlet:
-    context-path: /gestion_clientes
+    context-path: /db_clientes
 
 spring:
   application:
-    name: gestion_clientes
+    name: db_clientes
   datasource:
-    url: jdbc:postgresql://localhost:5432/gestion_clientes
+    url: jdbc:postgresql://localhost:5432/db_clientes
     username: admin
     password: password
     driver-class-name: org.postgresql.Driver
@@ -15,7 +15,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        default_schema: gestion_clientes
+        default_schema: db_clientes
         jdbc:
           batch_size: 5000
           batch_versioned_data: true

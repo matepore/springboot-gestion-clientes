@@ -4,6 +4,7 @@ import matepore.springboot.gestion.clientes.model.ClienteDTO;
 
 import java.util.List;
 
+// Servicio para gestionar operaciones relacionadas con clientes.
 public interface ClienteService {
     ClienteDTO create(ClienteDTO clienteDTO);
     ClienteDTO findById(Long id);

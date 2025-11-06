@@ -1,6 +1,7 @@
 package matepore.springboot.gestion.clientes.controller;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import matepore.springboot.gestion.clientes.model.ClienteDTO;
 import matepore.springboot.gestion.clientes.service.ClienteService;
 import org.springframework.http.HttpStatus;
@@ -10,14 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/gestion-clientes/api/v1")
 public class ClienteController {
 
     private final ClienteService clienteService;
-
-    public ClienteController(ClienteService clienteService) {
-        this.clienteService = clienteService;
-    }
 
     @PostMapping
     public ResponseEntity<ClienteDTO> create(@Valid @RequestBody ClienteDTO clienteDTO){

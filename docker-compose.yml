@@ -1,10 +1,10 @@
 services:
   postgres:
     image: postgres:15.2
-    container_name: postgres_db_clients
+    container_name: postgres_db_clientes
     restart: always
     environment:
-      POSTGRES_DB: db_clients
+      POSTGRES_DB: db_clientes
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
     ports:
@@ -12,3 +12,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - db:/data/db
+
+volumes:
+  postgres_data:
+  db:

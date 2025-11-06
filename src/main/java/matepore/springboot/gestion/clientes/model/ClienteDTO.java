@@ -9,6 +9,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+// Data Transfer Object para Cliente
 public class ClienteDTO {
 
     private Long id;

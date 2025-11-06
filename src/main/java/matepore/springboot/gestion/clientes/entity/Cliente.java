@@ -12,6 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @Table(name = "clientes")
+// Entidad que representa a un cliente en la base de datos.
 public class Cliente {
 
     @Id

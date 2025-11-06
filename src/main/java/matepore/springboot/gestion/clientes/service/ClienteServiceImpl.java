@@ -17,6 +17,7 @@ public class ClienteServiceImpl implements ClienteService{
 
     private final ClienteRepository clienteRepository;
 
+    // Métodos de mapeo entre Cliente y ClienteDTO
     private ClienteDTO mapDTO(Cliente cliente){
         return ClienteDTO.builder()
                 .id(cliente.getId())
@@ -37,6 +38,7 @@ public class ClienteServiceImpl implements ClienteService{
                 .build();
     }
 
+    // Implementación de los métodos del servicio
     @Override
     public ClienteDTO create(ClienteDTO clienteDTO) {
         log.info("Agregando un nuevo cliente a la base de datos.");
