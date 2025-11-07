@@ -15,14 +15,11 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        default_schema: db_clientes
         jdbc:
           batch_size: 5000
           batch_versioned_data: true
-          lob:
-            non_contextual_creation: true
-        hibernate.types.print.banner: false
+          lob.non_contextual_creation: true
         order_inserts: true
         order_updates: true
         generate_statistics: true
-    open-in-view: false
+      open-in-view: false

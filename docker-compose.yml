@@ -12,6 +12,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - db:/data/db
+      - ./src/main/resources/crear_tablas.sql:/docker-entrypoint-initdb.d/crear_tablas.sql
 
 volumes:
   postgres_data:
