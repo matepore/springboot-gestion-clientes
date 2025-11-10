@@ -8,10 +8,10 @@
 ![Maven](https://img.shields.io/badge/Maven-3.x-red.svg)
 ![Mit License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 📋 Description
+## 📋 Descripción
 **Springboot-gestion-clientes** es una aplicación RESTful desarrollada con **Spring Boot**. Esta API está diseñada para gestionar clientes, permitiendo operaciones CRUD (Crear, Leer, Actualizar, Eliminar) de manera eficiente y segura.
 
-### 🎯 Main Features
+### 🎯 Features Principales
 
 - ✅ **Gestión de Clientes**: Permite crear, leer, actualizar y eliminar clientes.
 - ✅ **API RESTful**: Endpoints bien definidos para interactuar con el servicio de gestión de clientes.
