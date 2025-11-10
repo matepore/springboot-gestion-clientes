@@ -47,4 +47,11 @@ public class ClienteDTO {
             example = "2000-05-17"
     )
     private LocalDate fechaNacimiento;
+
+    @Schema(
+            description = "Edad completa del cliente desglosada en años, meses y días.",
+            implementation = EdadCompletaDTO.class,
+            accessMode = Schema.AccessMode.READ_ONLY
+    )
+    private EdadCompletaDTO edadCompleta;
 }

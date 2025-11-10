@@ -5,9 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import matepore.springboot.gestion.clientes.entity.Cliente;
 import matepore.springboot.gestion.clientes.exception.ClienteNoEncontradoException;
 import matepore.springboot.gestion.clientes.model.ClienteDTO;
+import matepore.springboot.gestion.clientes.model.EdadCompletaDTO;
 import matepore.springboot.gestion.clientes.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 @Service
@@ -19,12 +22,17 @@ public class ClienteServiceImpl implements ClienteService{
 
     // Métodos de mapeo entre Cliente y ClienteDTO
     private ClienteDTO mapDTO(Cliente cliente){
+        // Cálculo detallado de la edad
+        LocalDate hoy = LocalDate.now();
+        Period edadDetallada = Period.between(cliente.getFechaNacimiento(), hoy);
+
         return ClienteDTO.builder()
                 .id(cliente.getId())
                 .nombre(cliente.getNombre())
                 .apellido(cliente.getApellido())
                 .edad(cliente.getEdad())
                 .fechaNacimiento(cliente.getFechaNacimiento())
+                .edadCompleta(new EdadCompletaDTO(edadDetallada.getYears(), edadDetallada.getMonths(), edadDetallada.getDays()))
                 .build();
     }
 
